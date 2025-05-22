@@ -1,49 +1,56 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/home.css'
+import whatsapp from '../assets/images/whatssapp.svg'
 
 import Helmet from '../components/Helmet/Helmet'
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import heroImg from '../assets/images/banner1.avif';
-import counterImg from '../assets/images/oferta.jpg';
-import Services from '../services/Services';
+import heroImg from '../assets/images/carrinho_hero2.png';
+import counterImg from '../assets/images/encarte_promocao.jpg';
 import ProductsList from '../components/Ul/ProductsList';
 import products from '../assets/data/products';
 import Clock from '../components/Ul/Clock';
 
+import segunda from '../assets/images/banner-segunda.jpg'
+import quarta from '../assets/images/banner-terca-quarta.jpg'
+import quinta from '../assets/images/banner-quinta.jpg';
+import final from '../assets/images/banner-final-semana.jpg'
+
+
+import Slide from '../pages/Slider'
 
 const Home = () => {
 
   const [trendingProducts, setTrendingProducts] = useState([])
   const [bestSalesProducts, setBestSalesProducts] = useState([])
   const [mobileProducts, setMobileProducts] = useState([])
-  const [wirelessProducts, setWirelessProducts] = useState([])
   const [popularProducts, setPopularProducts] = useState([])
 
   const year = new Date().getFullYear()
 
+
   useEffect(()=>{
-  const filteredTredingProducts = products.filter(item=> item.category === 'açougue'
+
+  const filteredTredingProducts = products.filter(item=> item.category === 'alta'
   );
 
-  const filteredBestSalesProducts = products.filter(item=> item.category === 'bebidas'
+  const filteredBestSalesProducts = products.filter(item=> item.category === 'melhores'
   );
 
-  const filteredMobileProducts = products.filter(item=> item.category === 'perfumaria'
+  const filteredMobileProducts = products.filter(item=> item.category === 'novidade'
   );
 
-  const filteredPopularProducts = products.filter(item=> item.category === 'hortifrutti'
+  const filteredPopularProducts = products.filter(item=> item.category === 'popular'
   );
 
-  const filteredWirelessProducts = products.filter(item=> item.category === 'limpeza'
-  );
+  
+
 
   setTrendingProducts(filteredTredingProducts);
   setBestSalesProducts(filteredBestSalesProducts);
     setMobileProducts(filteredMobileProducts);
-    setWirelessProducts(filteredWirelessProducts);
     setPopularProducts(filteredPopularProducts);
 
   }, []);
@@ -58,7 +65,7 @@ const Home = () => {
               Produto em alta {year}
             </p>
             <h2>Produtos de qualidade, economia para seu bolso </h2>
-            <p>Qualidade de atendimento, atendimento personalizado, economia de verdade, voce encontra aqui no Lisboa .</p>
+            <p>Qualidade de atendimento, atendimento personalizado, economia de verdade, voce encontra aqui no KekeMix Supermercados .</p>
             <motion.button whileTap={{scale: 1.2}} className='buy_btn'>
               <Link to='/shop'>Compre Agora </Link>
             </motion.button>
@@ -75,7 +82,17 @@ const Home = () => {
       </Container>
     </section>
 
-      <Services />
+    <div className='texto_promocao'>
+      <h1>Confira nossas ofertas </h1>
+      <p>
+        Ofertas válidas de sexta a segunda-feira, 16 a 19/05/2025, ou enquanto durarem os estoques.
+      </p>
+    </div>
+
+    <Slide />
+      
+      
+      
       <section className='trending_products'>
         <Container>
           <Row>
@@ -99,6 +116,24 @@ const Home = () => {
         </Container>
       </section>
 
+
+      <section>
+        <Container>
+          <Row>
+            <Col>
+              <div className='images_promocao'>
+                <img src={segunda} alt="" />
+                <img src={quarta} alt="" />
+                <img src={quinta} alt="" />
+                <img src={final} alt="" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+
+
       <section className='timer_count'>
         <Container>
           <Row>
@@ -110,16 +145,32 @@ const Home = () => {
               <Clock /> 
 
               <motion.button whileTap={{scale: 1.2}} className='buy_btn store_btn'>
-                <Link to='/shop'> Visite a Loja </Link>
+                <Link to='/lojas2'> Visite a Loja </Link>
               </motion.button>
             </Col>
 
             <Col lg='6' md='12' className='text-end counter_img'>
-              <img src={counterImg} alt="" />
+              <a href={counterImg} download >
+                <motion.img whileTap={{scale: 1.1}} src={counterImg} alt="Imagem para Download" style={{ cursor: 'pointer' }} />
+              </a>
+              <p>Clique para download </p>
             </Col>
           </Row>
         </Container>
       </section>
+
+
+
+   <div>
+  <a
+    href="https://api.whatsapp.com/send?phone=5521986199143&text=Podemos%20ajudar?"
+    className="btn-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={whatsapp} alt="Fale conosco no WhatsApp" />
+  </a>
+</div>
 
 
       <section className='new_arrivals'>
@@ -129,8 +180,7 @@ const Home = () => {
               <h2 className='section_title'> Novidades </h2>
             </Col>
             < ProductsList data={mobileProducts} />
-            < ProductsList data={wirelessProducts} />
-          </Row>
+           </Row>
         </Container>
       </section>
 
@@ -140,6 +190,7 @@ const Home = () => {
           <Col lg='12' className='text-center mb-5'>
             <h2 className='section_title'> Popular na Categoria </h2>
           </Col>
+          
           < ProductsList data={popularProducts} />
         </Row>
       </Container>

@@ -87,7 +87,7 @@ const Shop = () => {
 
   return (
     <Helmet title='Shop'>
-      <CommonSection title='Produtos' />
+      <CommonSection title='KekeMix ( Jd Catarina ) - São Gonçalo' />
 
       <section>
         <Container>

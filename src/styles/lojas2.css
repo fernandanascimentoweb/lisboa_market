@@ -1,0 +1,68 @@
+
+.texto_online {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.texto_online p {
+    padding: 10px;
+}
+
+.bloco{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+
+.lojas_texto h2 {
+    font-weight: 600;
+}
+
+.lojas_texto p {
+    text-align: justify;
+    padding: 15px;
+}
+
+.inicio_bloco h2 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.4rem;
+    background-color: #000;
+    padding: 8px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.inicio_bloco h2:hover{
+    background-color: yellow;
+    color: #000;
+}
+
+
+.inicio_bloco {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.inicio_bloco:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+.inicio_bloco img {
+    width: 250px;
+    height: 180px;
+    text-align: center;
+}

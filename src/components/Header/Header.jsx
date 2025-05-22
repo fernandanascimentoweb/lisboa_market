@@ -2,16 +2,14 @@ import React, { useEffect, useRef } from 'react'
 import './header.css'
 
 import { Container, Row } from 'reactstrap';
-import logo from '../../assets/images/loja_logo.jpg'
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import userIcon from '../../assets/images/user-icon.png'
 import { useSelector } from 'react-redux';
 
 
 const nav_links = [
     {
         path: 'home',
-        display: 'Home'
+        display: 'Inicio'
     },
     {
         path: 'shop',
@@ -19,7 +17,7 @@ const nav_links = [
     },
     {
         path: 'cart',
-        display: 'Compra'
+        display: 'Checkout'
     },
 ]
 
@@ -59,9 +57,9 @@ const Header = () => {
         <Row>
             <div className='nav_wrapper'>
                 <div className='logo'>
-                    <img src={logo} alt="" />
+                    <img src='https://i.ibb.co/gZw76xsv/carrinho.png' alt="" />
                     <div>
-                        <Link to='/home'><h1>Lisboa Market</h1></Link>
+                        <Link to='/home'><h1>Keke<span className='mix'>Mix</span></h1></Link>
                     </div>
                 </div>
 
@@ -78,16 +76,9 @@ const Header = () => {
                 </div>
 
                 <div className='nav_icons'>
-                    <span className='fav_icon'>
-                        <i class="ri-heart-line"></i>
-                        <span className='badge'>1</span>
-                    </span>
                     <span className='cart_icon' onClick={navigateTocart} >
-                        <i class="ri-shopping-bag-line"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
                         <span className='badge'> {totalQuantity} </span>
-                    </span>
-                    <span>
-                       <Link to='/login'> <img src={userIcon} alt="" /> </Link>
                     </span>
 
                     <div className='mobile_menu'>

@@ -4,11 +4,12 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from '../pages/Home'
 import Cart from '../pages/Cart'
 import Shop from '../pages/Shop'
-import Login from '../pages/Login'
-import Signup from '../pages/Signup'
 import Checkout from '../pages/Checkout'
 import ProductsDetails from '../pages/ProductsDetails'
-import Success from '../pages/Success'
+import Comprar from '../pages/Comprar'
+import Regulamento from '../pages/Regulamento'
+import Horario from '../pages/Horario'
+import Perguntas from '../pages/Perguntas'
 
 const Routers = () => {
   return (
@@ -19,9 +20,11 @@ const Routers = () => {
         <Route path='shop/:id' element={ < ProductsDetails />} />
         <Route path='cart' element={ < Cart />} />
         <Route path='checkout' element={ < Checkout />} />
-        <Route path='login' element={ < Login />} />
-        <Route path='signup' element={ < Signup />} />
-        <Route path='success' element={ < Success />} />
+        <Route path='regulamento' element={ < Regulamento />} />
+        <Route path='comprar' element={ < Comprar />} />
+        <Route path='horario' element={ < Horario />} />
+        <Route path='perguntas' element={ < Perguntas />} />
+
         
     </Routes>
   )

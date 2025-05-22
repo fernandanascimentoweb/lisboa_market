@@ -2,13 +2,13 @@ const serviceData = [
   {
     icon: "ri-truck-line",
     title: "Frete Gratis",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    subtitle: "Compras Acima de R$100,00",
     bg: "#fdefe6",
   },
   {
     icon: "ri-refresh-line",
     title: "Devolução Facil",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    subtitle: "Mais conforto pra você.",
     bg: "#ceebe9",
   },
   {

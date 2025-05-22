@@ -19,14 +19,18 @@
 }
 
 .logo img {
-    width: 65px;
-    height: 63px;
+    width: 50px;
+    height: 40px;
 }
 
 .logo h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: red;
+}
+
+.mix{
+    color: red;
 }
 
 .menu {
@@ -52,21 +56,24 @@
     font-size: 1.4rem;
     color: var(--primary-color);
     cursor: pointer;
+
 }
 
 .cart_icon, .fav_icon {
     position: relative;
+
 }
 
 .badge {
     position: absolute;
-    top: 25%;
-    right: -8%;
-    width: 15px;
+    top: 15%;
+    right: -50%;
+    width: 20px;
     height: 15px;
     content: '';
-    background: var(--primary-color);
-    color: #fff;
+    color: var(--primary-color);
+    background-color: yellow;
+    padding: 8px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -77,8 +84,8 @@
 }
 
 .nav_icons span img {
-    width: 30px;
-    height: 30px;
+    width: 38px;
+    height: 38px;
     cursor: pointer;
 }
 
@@ -117,6 +124,10 @@
         display: none;
     }
 
+    .cart_icon, .fav_icon{
+        right: 30px;
+    }
+
     .header {
         margin-top:-40px;
     }
@@ -147,12 +158,12 @@
     }
 
     .logo img {
-        width: 1rem;
-        height: 1rem;
+        width: 1.9rem;
+        height: 1.9rem;
     }
 
     .logo h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .fav_icon i, .cart_icon i {
@@ -163,6 +174,8 @@
         width: 1.4rem;
         height: 1.4rem;
     }
+
+    
 
     .header {
         width: 100%;

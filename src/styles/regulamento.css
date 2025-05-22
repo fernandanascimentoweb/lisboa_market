@@ -1,0 +1,26 @@
+
+
+.regulamento {
+    margin-bottom: 30px;
+}
+
+.regulamento h1{
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.regulamento p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.regulamento h5 {
+    padding: 20px;
+}
+
+@media only screen and (max-width: 768px){
+    .regulamento p {
+        margin: 20px;
+    }
+}
